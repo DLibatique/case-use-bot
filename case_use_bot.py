@@ -4400,5 +4400,7 @@ noun[3259]="youth"
 noun[3260]="zone"
 
 def generate_tweet():
+
     text = f'The case use of the day is the {choice(cases)} of {adj[choice(range(1, 1125))]} {noun[choice(range(1, 3261))]}.'
+
     return text
