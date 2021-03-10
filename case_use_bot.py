@@ -1,6 +1,6 @@
 # adj and noun list sourced from http://creativityforyou.com/nounadj.js
 
-import random
+from random import choice
 
 cases = [
     'nominative',
@@ -8,9 +8,6 @@ cases = [
     'dative',
     'accusative',
     'ablative',
-    'vocative',
-    'instrumental',
-    'locative'
 ]
 
 adj = {}
@@ -4402,4 +4399,6 @@ noun[3258]="youngster"
 noun[3259]="youth"
 noun[3260]="zone"
 
-print(f'The case use of the day is the {random.choice(cases)} of {adj[random.choice(range(1, 1125))]} {noun[random.choice(range(1, 3261))]}.')
+def generate_tweet():
+    text = f'The case use of the day is the {choice(cases)} of {adj[choice(range(1, 1125))]} {noun[choice(range(1, 3261))]}.'
+    return text
