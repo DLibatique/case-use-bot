@@ -5,7 +5,7 @@ from case_use_bot import generate_tweet
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', hours=10)
+@sched.scheduled_job('interval', hours=24)
 def tweet_line():
     print(generate_tweet())
     api.update_status(generate_tweet())
